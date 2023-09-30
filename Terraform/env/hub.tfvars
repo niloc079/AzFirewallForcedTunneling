@@ -3,8 +3,8 @@
 identifier                     = ""             #Org name
 environment                    = "hub"          #Hub, Prd, Stg, Dev, Tst, Idp
 application                    = "net"          #net, app, ads
-location                       = "centralus"    #Azure Location
 iteration                      = ""             #Numeric
+location                       = "centralus"    #Azure Location
 application_owner              = "Mark Brendanawicz"
 deployment_source              = "terraform"
 #
