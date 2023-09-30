@@ -43,16 +43,15 @@ resource "azurerm_firewall" "afw" {
   }
 
   #ForcedTunneling
-    #private_ip_ranges   = ["255.255.255.255/32"]  #Always SNAT
-    #private_ip_ranges   = ["0.0.0.0/0"]   #Never SNAT
-    #private_ip_ranges   = ["IANAPrivateRanges"]    #
-
   management_ip_configuration {
     name                    = azurerm_public_ip.pip-afw-mgt.name
     subnet_id               = azurerm_subnet.vnet-sub-AzureFirewallManagementSubnet.id
     public_ip_address_id    = azurerm_public_ip.pip-afw-mgt.id
   }
-  #ForcedTunneling
+  
+  #private_ip_ranges   = ["255.255.255.255/32"]   #Always SNAT
+  #private_ip_ranges   = ["0.0.0.0/0"]            #Never SNAT
+  #private_ip_ranges   = ["IANAPrivateRanges"]    #
 }
 
 data "azurerm_monitor_diagnostic_categories" "afw-diag" {

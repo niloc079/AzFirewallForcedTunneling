@@ -1,6 +1,6 @@
 # Variables
-$AzureRmSubscriptionName = "sub-hub"
-$RgName = "Workbook-Rg-Name"
+$AzureRmSubscriptionName = "?AzSub?"
+$RgName = "?Resource Group?"
 $workbookDisplayName = "Azure Firewall"
 $workbookSourceId = "Azure Monitor"
 $workbookType = "workbook"
