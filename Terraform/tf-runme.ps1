@@ -16,3 +16,5 @@ terraform import --var-file=env/hub.tfvars azurerm_resource_group.rg /subscripti
 
 #Cost
 infracost breakdown --show-skipped --path .
+infracost breakdown --show-skipped --path . --format html --out-file infracost.html
+infracost breakdown --show-skipped --path . --format json --out-file infracost.json
